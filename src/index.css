@@ -1,13 +1,84 @@
+/* Add this to index.css */
+
+/* Ensure body fills the screen and applies flexbox centering */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Make the body full height of the viewport */
+  margin: 0; /* Remove default margin */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f0f0; /* Optional: add a background color */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Center the .container with max width and padding */
+.container {
+  max-width: 500px; /* Limit the width of the container */
+  width: 100%; /* Make it responsive */
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex; /* Ensures the content inside the container is also centered */
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title styling */
+.app-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Todo list styling */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Empty state styling */
+.empty-state {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Styling for input form */
+.formselect {
+  margin-top: 20px;
+}
+
+.inputselect {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-top: 10px;
+}
+
+.inputselect:focus {
+  border-color: #007bff;
+}
+
+/* Icon styling */
+.icon {
+  font-size: 6rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  .app-title {
+    font-size: 1.5rem;
+  }
 }
